@@ -8,6 +8,7 @@
   /* width: ; */
   background-color: #f6f6f6;
   border-radius: 10px;
+  margin-bottom: 30px;
 }
 
 .signup_page_heading {
@@ -53,11 +54,12 @@
   padding: 15px 45px;
   font-size: 1.25rem;
   font-weight: 500;
-  background-color: #4c7af8;
+  background-color: #f7c42c;
   border-radius: 10px;
-  color: white;
+  color: black;
   cursor: pointer;
   text-align: center;
+  outline: 1pt solid black;
 }
 
 input[type="checkbox"] {

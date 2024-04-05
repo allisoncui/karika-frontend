@@ -6,22 +6,22 @@ import { useNavigate } from "react-router-dom";
 import karikaLogo from "../karika-logo-cropped.png";
 
 function LandingPage() {
-  const [patient, setPatient] = useState(false);
+  const [returning, setReturning] = useState(false);
   const [provider, setProvider] = useState(false);
   const navigate = useNavigate();
 
-  const patientClick = () => {
-    setPatient(true);
+  const returningClick = () => {
+    setReturning(true);
     setProvider(false);
   };
 
   const providerClick = () => {
     setProvider(true);
-    setPatient(false);
+    setReturning(false);
   };
 
   const onNextClick = () => {
-    if (patient || provider) navigate("/sign-up");
+    if (returning || provider) navigate("/sign-up");
   };
   return (
     <div className="landing_page_outer_container">
@@ -41,12 +41,12 @@ function LandingPage() {
       <div className="landing_page_button_container">
         <div
           className={
-            "landing_page_patient_container " +
-            (patient
-              ? "landing_page_patient_button_enabled"
-              : "landing_page_patient_button_disabled")
+            "landing_page_returning_container " +
+            (returning
+              ? "landing_page_returning_button_enabled"
+              : "landing_page_returning_button_disabled")
           }
-          onClick={patientClick}
+          onClick={returningClick}
         >
           I have an account
         </div>
@@ -65,7 +65,7 @@ function LandingPage() {
       <div
         className={
           "landing_page_next_button " +
-          (provider || patient ? "" : "landing_page_next_button_disabled")
+          (provider || returning ? "" : "landing_page_next_button_disabled")
         }
         onClick={onNextClick}
       >
