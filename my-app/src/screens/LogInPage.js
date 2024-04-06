@@ -42,7 +42,7 @@ function LogInPage() {
                 className="login_page_save_continue"
                 onClick={() => navigate("/search")}
             >
-                Log In
+                Login
             </div>
 
             <div className="login_page_subheading">

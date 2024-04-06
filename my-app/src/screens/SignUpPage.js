@@ -15,6 +15,26 @@ function SignUpPage() {
     setEmailConfirmation(e.target.value);
   };
 
+  const [shortBio, setShortBio] = useState("");
+  const handleShortBioChange = (e) => {
+    setShortBio(e.target.value);
+  }
+
+  const [profession, setProfession] = useState("");
+  const handleProfessionChange = (e) => {
+    setProfession(e.target.value);
+  }
+
+  const [interests, setInterests] = useState("");
+  const handleInterestsChange = (e) => {
+    setInterests(e.target.value);
+  }
+
+  const [goals, setGoals] = useState("");
+  const handleGoalsChange = (e) => {
+    setGoals(e.target.value);
+  }
+
   const [password, setPassword] = useState("");
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
@@ -52,6 +72,18 @@ function SignUpPage() {
     setChecked1(e.target.checked);
   };
 
+  const [selectedLanguage, setSelectedLanguage] = useState("");
+  const handleLanguageChange = (e) => {
+    setSelectedLanguage(e.target.value);
+  };
+
+  const [selectedCountry, setSelectedCountry] = useState("");
+  const handleCountryChange = (e) => {
+    setSelectedCountry(e.target.value);
+  };
+
+
+
   return (
     <div className="signup_page_outer_container">
       <div className="signup_page_heading">Create an account</div>
@@ -59,34 +91,8 @@ function SignUpPage() {
         <span className="signup_page_subheading">Already have one?</span>
         <span><a href="/log-in" className="login_page_redirect">Log in.</a></span>
       </span>
-      <div className="signup_page_field_heading">Enter your email</div>
-      <input
-        className="signup_page_field"
-        type="email"
-        placeholder=""
-        value={email}
-        onChange={handleEmailChange}
-      />
 
-      <div className="signup_page_field_heading">Confirm your email</div>
-      <input
-        className="signup_page_field"
-        type="email"
-        placeholder=""
-        value={email_confirmation}
-        onChange={handleEmailConfirmationChange}
-      />
-
-      <div className="signup_page_field_heading">Create a password</div>
-      <input
-        className="signup_page_field"
-        type="text"
-        placeholder="At least 6 characters long"
-        value={password}
-        onChange={handlePasswordChange}
-      />
-
-      <div className="signup_page_field_heading">Your name</div>
+      <div className="signup_page_field_heading">Full Name:</div>
       <div
         style={{
           display: "flex",
@@ -113,7 +119,7 @@ function SignUpPage() {
         />
       </div>
 
-      <div className="signup_page_field_heading">Date of birth</div>
+      <div className="signup_page_field_heading">Date of birth:</div>
       <div
         style={{
           display: "flex",
@@ -151,6 +157,81 @@ function SignUpPage() {
           style={{ width: "70px", marginLeft: "5px" }}
         />
       </div>
+
+      <div className="signup_page_field_heading">Short Bio:</div>
+      <input
+        className="signup_page_field"
+        type="text"
+        placeholder="Ex: I am a current college student at Columbia University..."
+        value={shortBio}
+        onChange={handleShortBioChange}
+      />
+
+      <div className="signup_page_field_heading">Profession:</div>
+      <input
+        className="signup_page_field"
+        type="text"
+        placeholder="Ex: Software Engineer"
+        value={profession}
+        onChange={handleProfessionChange}
+      />
+
+      <div className="signup_page_field_heading">Interests:</div>
+      <input
+        className="signup_page_field"
+        type="text"
+        placeholder="Minimum of 3"
+        value={interests}
+        onChange={handleInterestsChange}
+      />
+
+      <div className="signup_page_field_heading">Top Goals:</div>
+      <input
+        className="signup_page_field"
+        type="text"
+        placeholder="Minimum of 3"
+        value={goals}
+        onChange={handleGoalsChange}
+      />
+
+      <div className="signup_page_field_heading">Language:</div>
+      <select
+        className="signup_page_field"
+        value={selectedLanguage}
+        onChange={handleLanguageChange}
+      >
+        <option value="" disabled>Select</option>
+        <option value="English">English</option>
+        <option value="Spanish">Spanish</option>
+        <option value="French">French</option>
+        <option value="German">German</option>
+        <option value="Chinese">Chinese</option>
+      </select>
+
+
+      <div className="signup_page_field_heading">Countries:</div>
+      <select
+        className="signup_page_field"
+        value={selectedCountry}
+        onChange={handleCountryChange}
+      >
+        <option value="" disabled>Select a country</option>
+        <option value="USA">United States</option>
+        <option value="CAN">Canada</option>
+        <option value="MEX">Mexico</option>
+        <option value="UK">United Kingdom</option>
+
+      </select>
+
+
+      <div className="signup_page_field_heading">Create a password</div>
+      <input
+        className="signup_page_field"
+        type="text"
+        placeholder="Minimum 6 characters long"
+        value={password}
+        onChange={handlePasswordChange}
+      />
 
       <label
         style={{
