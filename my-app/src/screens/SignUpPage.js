@@ -55,7 +55,10 @@ function SignUpPage() {
   return (
     <div className="signup_page_outer_container">
       <div className="signup_page_heading">Create an account</div>
-      <div className="signup_page_subheading">Already have one? Sign in.</div>
+      <span>
+        <span className="signup_page_subheading">Already have one?</span>
+        <span><a href="/log-in" className="login_page_redirect">Log in.</a></span>
+      </span>
       <div className="signup_page_field_heading">Enter your email</div>
       <input
         className="signup_page_field"

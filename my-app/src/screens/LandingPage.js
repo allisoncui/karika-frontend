@@ -1,27 +1,27 @@
 import React from "react";
 import "./LandingPage.css";
-import dummy_photo from "../assets/dummy_photo.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import karikaLogo from "../karika-logo-cropped.png";
 
 function LandingPage() {
   const [returning, setReturning] = useState(false);
-  const [provider, setProvider] = useState(false);
+  const [newUser, setNewUser] = useState(false);
   const navigate = useNavigate();
 
   const returningClick = () => {
     setReturning(true);
-    setProvider(false);
+    setNewUser(false);
   };
 
-  const providerClick = () => {
-    setProvider(true);
+  const newUserClick = () => {
+    setNewUser(true);
     setReturning(false);
   };
 
   const onNextClick = () => {
-    if (returning || provider) navigate("/sign-up");
+    if (newUser) navigate("/sign-up");
+    if (returning) navigate("/log-in");
   };
   return (
     <div className="landing_page_outer_container">
@@ -52,12 +52,12 @@ function LandingPage() {
         </div>
         <div
           className={
-            "landing_page_provider_container " +
-            (provider
-              ? "landing_page_provider_button_enabled"
-              : "landing_page_provider_button_disabled")
+            "landing_page_newUser_container " +
+            (newUser
+              ? "landing_page_newUser_button_enabled"
+              : "landing_page_newUser_button_disabled")
           }
-          onClick={providerClick}
+          onClick={newUserClick}
         >
           Sign Up
         </div>
@@ -65,7 +65,7 @@ function LandingPage() {
       <div
         className={
           "landing_page_next_button " +
-          (provider || returning ? "" : "landing_page_next_button_disabled")
+          (newUser || returning ? "" : "landing_page_next_button_disabled")
         }
         onClick={onNextClick}
       >

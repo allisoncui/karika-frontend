@@ -76,7 +76,7 @@
   opacity: 0.75;
 }
 
-.landing_page_provider_container {
+.landing_page_newUser_container {
   width: fit-content;
   outline: 1pt solid #777777;
   border-radius: 5px;
@@ -109,7 +109,7 @@
   color: black;
 }
 
-.landing_page_provider_button_enabled {
+.landing_page_newUser_button_enabled {
   background-color: pink;
   opacity: 1;
   outline: 1pt solid black;
