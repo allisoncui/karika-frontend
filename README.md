@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 Before you begin, ensure you have the following installed:
 - [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en/) which includes `npm` (Node Package Manager)
+- [Node.js](https://nodejs.org/en/) which includes `npm`
 
 ### Installing
 
@@ -26,3 +26,5 @@ To get a development environment running, follow these steps:
 3. **Run the application**
    ```bash
    npm start
+
+This will launch the development server and open the application in your default web browser at http://localhost:3000.
