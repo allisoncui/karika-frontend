@@ -1,6 +1,6 @@
 # Karika Republic - CBL Spring 2024 Frontend
 
-This repository contains the frontend code for the CBL project Karika Republic. Developed during Spring 2024 semester.
+This repository contains the frontend code for the CBL project Karika Republic. Developed during Spring 2024.
 
 ## Getting Started
 
